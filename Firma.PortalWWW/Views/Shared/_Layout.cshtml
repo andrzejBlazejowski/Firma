@@ -1,0 +1,73 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/lib/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="~/lib/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        @await Html.PartialAsync("Odnosniki", (IEnumerable<Firma.Data.Data.CMS.Strona>) ViewBag.ModelStrony)
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          @RenderBody()
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+            @await Html.PartialAsync("aktualnosci", (IEnumerable<Firma.Data.Data.CMS.Aktualnosc>) ViewBag.ModelAktualnosci)
+        </div>
+        <br><br>
+    </div>
+
+    <footer class="page-footer orange">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">WSB-NLU</h5>
+                    <p class="grey-text text-lighten-4">Projekt realizowany w ramach kursu WSB-NLU</p>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Dodatkowe informacje</h5>
+                    <ul>
+                        <li>@Html.ActionLink("Polityka prywatnosci","Privacy","Home")</li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by WSB-NLU</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../../bin/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+</html>

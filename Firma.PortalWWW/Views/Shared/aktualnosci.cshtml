@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Firma.Data.Data.CMS.Aktualnosc>
+
+<!--   Icon Section   -->
+<div class="row">
+
+    @foreach(var item in Model)
+    {
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                <h5 class="center">@item.Tytul</h5>
+                <p class="light">@item.Tresc</p>
+                @Html.ActionLink(item.Tytul,"Index","Aktualnosc", new {id=item.IdAktualnosci}, null)
+            </div>
+        </div>
+    }
+</div>
