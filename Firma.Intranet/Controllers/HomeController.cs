@@ -13,7 +13,7 @@ namespace Firma.Intranet.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult IntranetIndex()
         {
             return View();
         }

@@ -22,5 +22,8 @@ namespace Firma.Data.Data
         public DbSet<Aktualnosc> Aktualnosc { get; set; }
         public DbSet<Rodzaj> Rodzaj { get; set; }
         public DbSet<Towar> Towar { get; set; }
+        public DbSet<DodatkoweInformacje> DodatkoweInformacje { get; set; }
+        public DbSet<Parametry> Parametr { get; set; }
+        public DbSet<Partnerzy> Partner { get; set; }
     }
 }
